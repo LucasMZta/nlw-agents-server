@@ -1,21 +1,29 @@
 import { reset, seed } from 'drizzle-seed'
 import { db, sql } from './connection.ts'
-import { schema } from './schema/index.ts'
+import { questions } from './schema/questions.ts'
+// import { schema } from './schema/index.ts'
+import { rooms } from './schema/rooms.ts'
 
-await reset(db, schema)
+const seedSchema = { rooms, questions }
 
-await seed(db, schema).refine(f => {
+await reset(db, seedSchema)
+
+await seed(db, seedSchema).refine((f) => {
    return {
       rooms: {
-         count: 20,
+         count: 3,
          columns: {
             name: f.companyName(),
             description: f.loremIpsum(),
+            createdAt: f.date({
+               minDate: new Date('2025-01-01'),
+               maxDate: new Date(),
+            }),
          },
          with: {
-            questions: 5,
-         }
-      }
+            questions: 3,
+         },
+      },
    }
 })
 

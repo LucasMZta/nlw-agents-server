@@ -15,6 +15,20 @@
       "when": 1751995668713,
       "tag": "0001_magenta_pandemic",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1752168650387,
+      "tag": "0002_ambiguous_valeria_richards",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "7",
+      "when": 1752175237760,
+      "tag": "0003_nifty_amphibian",
+      "breakpoints": true
     }
   ]
 }
