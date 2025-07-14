@@ -60,7 +60,7 @@ export async function generateAnswer(
 
       INSTRUÇÕES:
       - use apenas informações contidas no contexto enviado;
-      - se a resposta nao for encontrada no contexto, apenas responda que nao possui informações suficientees para responder
+      - se a resposta nao for encontrada no contexto, apenas responda que nao possui informações suficientes para responder
       - seja objetivo
       - mantenha um tom educativo e profissional
       - cite trechos relevantes do contexto se apropriado
